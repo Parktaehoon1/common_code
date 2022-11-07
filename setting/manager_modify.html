@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<title>OWNERWORLD 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+
+<!-- header -->
+<header>
+	<h1><a href="../main/index.html"><img src="../assets/img/com/logo.svg" alt="오너월드 관리자"><span><strong>OWNERWORLD</strong><em>오너월드 관리자</em></span></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../main/index.html"><span>DASHBOARD</span></a></li>
+			<li><a href="../member/person.html"><span>회원관리</span></a></li>
+			<li><a href="../contents/opentalk.html"><span>콘텐츠관리</span></a></li>
+			<li><a href="../cs/notice.html"><span>CS관리</span></a></li>
+			<li><a href="../coin/coin.html"><span>코인관리</span></a></li> 
+		</ul>
+		<div class="tmenu">
+			<a class="on" href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>관리자 관리</h2>
+		<ul>
+			<li class="on"><a href="../setting/manager.html"><span>관리자관리</span></a></li>
+			<li><a href="../setting/password.html"><span>비밀번호변경</span></a></li>
+
+		</ul>
+		<p class="copyright">COPYRIGHT © OWNERWORLD. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+
+
+	<!-- content -->
+	<div class="content">
+
+		<h2 class="ctit"><span>SETTING</span> 관리자 수정</h2>
+
+		<section class="boardview boardwrite category">
+			<h3 class="ctit">관리자 정보</h3>
+			<div>
+
+				<dl>
+					<dt>아이디</dt>
+					<dd><input type="text" id="" name="" class="w100p" placeholder="이메일 입력" value="OWNERWORLD1@OWNERWORLD.com"></dd>
+				</dl>
+				<dl>
+					<dt>비밀번호 </dt>
+					<dd><input type="text" id="" name="" class="w300" placeholder="비밀번호 입력" value="********" ></dd>
+				</dl>
+				<dl>
+					<dt>이름</dt>
+					<dd><input type="text" id="" name="" class="w300" placeholder="휴대폰 번호 입력" value="홍길동" ></dd>
+				</dl>
+				<dl>
+					<dt>휴대폰 번호</dt>
+					<dd><input type="text" id="" name="" class="w300" placeholder="휴대폰 번호 입력"  ></dd>
+				</dl>
+				<dl>
+					<dt>전화번호</dt>
+					<dd><input type="text" id="" name="" class="w300" placeholder="전화번호 입력"  ></dd>
+				</dl>
+				<dl>
+					<dt>부서</dt>
+					<dd><input type="text" id="" name="" placeholder="소속 입력" ><input type="text" id="" name="" class="ml10" placeholder="부서 입력" ><input type="text" id="" name="" class="ml10" placeholder="직급 입력"  ></dd>
+				</dl>
+				<dl>
+					<dt>상태</dt>
+					<dd>
+					<div class="checks">
+							<span>
+							<input type="radio" id="category_sort1" name="category_sort" checked="checked">
+							<label for="category_sort1">사용중</label>
+							</span>
+							<span>
+							<input type="radio" id="category_sort2" name="category_sort">
+							<label for="category_sort2">일시중지</label>
+							</span>
+					</div>
+					</dd>
+				</dl>
+
+			</div>
+		</section>
+
+		<!-- btnwrap -->
+		<div class="btnwrap">
+			<input type="button" value="취소" onClick="window.location='../setting/manager.html'">
+			<input type="button" value="수정" class="btn_ok" onclick="toast('관리자 정보가 수정되었습니다')" >
+		</div>
+		<!-- // btnwrap -->
+
+	</div>
+	<!-- // content -->
+
+</div>
+<!-- // wrap -->
+
+<div id="toast" class="toast"></div>
+
+</body>
+</html>

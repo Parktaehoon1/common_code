@@ -1,0 +1,282 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<title>OWNERWORLD 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+<!-- header -->
+<header>
+	<h1><a href="../main/index.html"><img src="../assets/img/com/logo.svg" alt="오너월드 관리자"><span><strong>OWNERWORLD</strong><em>오너월드 관리자</em></span></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../main/index.html"><span>DASHBOARD</span></a></li>
+			<li><a href="../member/person.html"><span>회원관리</span></a></li>
+			<li><a href="../contents/opentalk.html"><span>콘텐츠관리</span></a></li>
+			<li class="on"><a href="../cs/qna.html"><span>CS관리</span></a></li>
+			<li><a href="../coin/coin.html"><span>코인관리</span></a></li>
+		</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>CS 관리</h2>
+		<ul>
+			<li><a href="../cs/qna.html"><span>1:1 문의</span></a></li>
+			<li class="on"><a href="../cs/report_feed.html"><span>피드신고접수</span></a></li>
+			<li><a href="../cs/report_comment.html"><span>댓글신고접수</span></a></li>
+			<li><a href="../cs/faq.html"><span>FAQ</span></a></li>
+			<li><a href="../cs/event.html"><span>이벤트</span></a></li>
+			<li><a href="../cs/notice.html"><span>공지사항</span></a></li>
+		</ul>
+		<p class="copyright">COPYRIGHT © OWNERWORLD. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+
+	<!-- content -->
+	<div class="content">
+
+		<h2 class="ctit"><span>CUSTOMER</span> 피드신고접수</h2>
+
+		<!-- searchwrap -->
+		<section class="searchwrap">
+
+			<div class="sbox">
+				<span class="stit">검색조건</span>
+
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="0" selected>처리상태</option>
+					<option value="1">전체</option>
+					<option value="2">접수대기</option>
+					<option value="3">처리중</option>
+					<option value="4">답변완료</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="1" selected>문의정보</option>
+					<option value="1">전체</option>
+					<option value="2">제목</option>
+					<option value="3">작성자</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<input type="text" class="stxt" id="searchTxt" name="searchTxt" placeholder="검색어를 입력해보세요">
+			</div>
+
+			<div class="sbox">
+				<span class="stit">조회기간</span>
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="1" selected>전체</option>
+					<option value="2">오늘</option>
+					<option value="3">1주</option>
+					<option value="4">1개월</option>
+					<option value="5">6개월</option>
+					<option value="6">1년</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<div class="calendarbox">
+					<span><input type="text" id="datepicker1"></span>
+					<span class="dot">~</span>
+					<span><input type="text" id="datepicker2"></span>
+				</div>
+			</div>
+
+			<div class="sbtn"><input type="button" id="searchBtn" name="searchBtn" value ="검색"></div>
+
+		</section>
+		<!-- // searchwrap -->
+
+		<!-- boardwrap -->
+		<section class="boardwrap">
+
+			<div class="boardtit">
+				<h3 class="ctit">피드신고접수 <span>12</span></h3>
+				<div class="btbtn">
+					<!-- selectbox -->
+					<div class="selectbox">
+						<select class="selectpicker">
+						<option value="1" selected>20개씩 보기</option>
+						<option value="2">50개씩 보기</option>
+						<option value="3">100개씩 보기</option>
+						<option value="4">200개씩 보기</option>
+						</select>
+					</div>
+					<!-- // selectbox -->
+				</div>
+			</div>
+
+			<div class="boardlist board_qna">
+				<ul class="tit">
+					<li class="no">NO</li>
+					<li class="title">신고내용</li>
+					<li class="writer">작성자</li>
+					<li class="date">신고접수일</li>
+					<li class="reply">답변</li>
+					<li class="detail">상세보기</li>
+				</ul>
+
+				<!-- 내역없을 시 -->
+				<div class="nodata">
+							<span><i>!</i><span>
+							<span>내역이 없습니다</span>
+						</div>
+				<!-- // 내역없을 시 -->
+
+				<!-- 내역있을 시 : 기본 20개씩 노출
+					<div class="listwrap">
+						<ul>
+							<li class="no"><em>10</em></li>
+							<li class="title"><em>신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 </em></li>
+							<li class="writer"><em>여행가고파</em></li>
+							<li class="date"><em>2022.11.02</em></li>
+							<li class="reply"><em>접수대기</em></li>
+							<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../cs/report_feed_detail.html'"></li>
+						</ul>
+						<ul>
+							<li class="no"><em>9</em></li>
+							<li class="title"><em>신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 </em></li>
+							<li class="writer"><em>여행가고파</em></li>
+							<li class="date"><em>2022.11.02</em></li>
+							<li class="reply"><em class="ing">처리중</em></li>
+							<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../cs/report_feed_detail.html'"></li>
+						</ul>
+						<ul>
+							<li class="no"><em>8</em></li>
+							<li class="title"><em>신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 </em></li>
+							<li class="writer"><em>여행가고파</em></li>
+							<li class="date"><em>2022.11.02</em></li>
+							<li class="reply"><em class="done">처리완료</em></li>
+							<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../cs/report_feed_detail.html'"></li>
+						</ul>
+						<ul>
+							<li class="no"><em>7</em></li>
+							<li class="title"><em>신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 </em></li>
+							<li class="writer"><em>여행가고파</em></li>
+							<li class="date"><em>2022.11.02</em></li>
+							<li class="reply"><em class="done">처리완료</em></li>
+							<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../cs/report_feed_detail.html'"></li>
+						</ul>
+						<ul>
+							<li class="no"><em>6</em></li>
+							<li class="title"><em>신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 </em></li>
+							<li class="writer"><em>여행가고파</em></li>
+							<li class="date"><em>2022.11.02</em></li>
+							<li class="reply"><em class="done">처리완료</em></li>
+							<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../cs/report_feed_detail.html'"></li>
+						</ul>
+						<ul>
+							<li class="no"><em>5</em></li>
+							<li class="title"><em>신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 </em></li>
+							<li class="writer"><em>여행가고파</em></li>
+							<li class="date"><em>2022.11.02</em></li>
+							<li class="reply"><em class="done">처리완료</em></li>
+							<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../cs/report_feed_detail.html'"></li>
+						</ul>
+						<ul>
+							<li class="no"><em>4</em></li>
+							<li class="title"><em>신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 </em></li>
+							<li class="writer"><em>여행가고파</em></li>
+							<li class="date"><em>2022.11.02</em></li>
+							<li class="reply"><em class="done">처리완료</em></li>
+							<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../cs/report_feed_detail.html'"></li>
+						</ul>
+						<ul>
+							<li class="no"><em>3</em></li>
+							<li class="title"><em>신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 </em></li>
+							<li class="writer"><em>여행가고파</em></li>
+							<li class="date"><em>2022.11.02</em></li>
+							<li class="reply"><em class="done">처리완료</em></li>
+							<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../cs/report_feed_detail.html'"></li>
+						</ul>
+						<ul>
+							<li class="no"><em>2</em></li>
+							<li class="title"><em>신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 </em></li>
+							<li class="writer"><em>여행가고파</em></li>
+							<li class="date"><em>2022.11.02</em></li>
+							<li class="reply"><em class="done">처리완료</em></li>
+							<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../cs/report_feed_detail.html'"></li>
+						</ul>
+						<ul>
+							<li class="no"><em>1</em></li>
+							<li class="title"><em>신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 신고내용입니다 </em></li>
+							<li class="writer"><em>여행가고파</em></li>
+							<li class="date"><em>2022.11.02</em></li>
+							<li class="reply"><em class="done">처리완료</em></li>
+							<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../cs/report_feed_detail.html'"></li>
+						</ul>
+					</div>
+					<!-- // 내역있을 시 -->
+
+			</div>
+
+			<!-- page
+				<div class="page">
+					<ul>
+						<li class="start"><a href=""><span>처음</span> </a></li>
+						<li class="pre"><a href=""><span>이전</span> </a></li>
+						<li><a href="">1</a></li>
+						<li class="on"><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+						<li class="next"><a href=""><span>다음 </span> </a></li>
+						<li class="end"><a href=""><span>마지막 </span> </a></li>
+					</ul>
+				</div>
+				<!-- // page -->
+
+
+		</section>
+		<!-- boardwrap -->
+
+	</div>
+	<!-- // content -->
+
+</div>
+<!-- // wrap -->
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<title>OWNERWORLD 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+
+
+<!-- header -->
+<header>
+	<h1><a href="../main/index.html"><img src="../assets/img/com/logo.svg" alt="오너월드 관리자"><span><strong>OWNERWORLD</strong><em>오너월드 관리자</em></span></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../main/index.html"><span>DASHBOARD</span></a></li>
+			<li class="on"><a href="../member/person.html"><span>회원관리</span></a></li>
+			<li><a href="../contents/opentalk.html"><span>콘텐츠관리</span></a></li>
+			<li><a href="../cs/notice.html"><span>CS관리</span></a></li>
+			<li><a href="../coin/coin.html"><span>코인관리</span></a></li>
+			</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>회원관리</h2>
+		<ul>
+			<li><a href="../member/person.html"><span>일반회원</span></a></li>
+			<li class="on"><a href="../member/suspend.html"><span>정지된 회원</span></a></li>
+		</ul>
+		<p class="copyright">COPYRIGHT © OWNERWORLD. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+
+	<!-- content -->
+	<div class="content">
+
+		<h2 class="ctit"><span>MEMBER</span> 정지된 회원</h2>
+
+		<!-- searchwrap -->
+		<section class="searchwrap">
+
+			<div class="sbox">
+				<span class="stit">검색조건</span>
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="0" selected>회원상태</option>
+					<option value="0">전체</option>
+					<option value="2">일반</option>
+					<option value="3">정지</option>
+					<option value="4">탈퇴</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="0" selected>회원정보</option>
+					<option value="1">전체</option>
+					<option value="2">아이디</option>
+					<option value="3">닉네임</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<input type="text" class="stxt" id="searchTxt" name="searchTxt" placeholder="아이디 또는 닉네임을 검색해보세요">
+			</div>
+
+			<div class="sbox">
+				<span class="stit">조회기간</span>
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="1" selected>전체</option>
+					<option value="2">오늘</option>
+					<option value="3">1주</option>
+					<option value="4">1개월</option>
+					<option value="5">6개월</option>
+					<option value="6">1년</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<div class="calendarbox">
+					<span><input type="text" id="datepicker1"></span>
+					<span class="dot">~</span>
+					<span><input type="text" id="datepicker2"></span>
+				</div>
+			</div>
+
+			<div class="sbtn"><input type="button" id="searchBtn" name="searchBtn" value ="검색"></div>
+
+		</section>
+		<!-- // searchwrap -->
+
+
+		<!-- boardwrap -->
+		<section class="boardwrap">
+
+			<div class="boardtit">
+				<h3 class="ctit">정지된 회원 <span>123,123,123</span></h3>
+				<div class="btbtn">
+					<input type="button" id="" name="" value="엑셀다운로드">
+					<!-- selectbox -->
+					<div class="selectbox">
+						<select class="selectpicker">
+						<option value="1" selected>20개씩 보기</option>
+						<option value="2">50개씩 보기</option>
+						<option value="3">100개씩 보기</option>
+						<option value="4">200개씩 보기</option>
+						</select>
+					</div>
+					<!-- // selectbox -->
+				</div>
+				
+			</div>
+
+			<div class="boardlist board_member">
+				<ul class="tit">
+					<li class="chkbox">
+						<div class="vbox_ck_all checks">
+							<span>
+							<input type="checkbox" id="checkall" name="chk">
+							<label for="checkall"><i>checkbox</i></label>
+							</span>
+						</div>
+					</li>
+					<li class="no">NO</li>
+					<li class="id">ID(이메일)</li>
+					<li class="nickname">닉네임</li>
+					<li class="state">회원상태</li>
+					<li class="date">가입일</li>
+					<li class="detail">상세보기</li>
+				</ul>
+
+				<!-- 내역없을 시
+				<div class="nodata">
+					<span><i>!</i><span>
+					<span>내역이 없습니다</span>
+				</div>
+				<!-- // 내역없을 시 -->
+
+				<!-- 내역있을 시 -->
+				<div class="listwrap">
+					<ul>
+						<li class="chkbox">
+							<div class="vbox_ck checks">
+							<span>
+							<input type="checkbox" id="chk_01" name="chk">
+							<label for="chk_01"><i>checkbox</i></label>
+							</span>
+							</div>
+						</li>
+						<li class="no"><em>100</em></li>
+						<li class="id"><em>help@sigmachain.net</em></li>
+						<li class="nickname"><em>바다가좋아</em></li>
+						<li class="state"><em>정지</em></li>
+						<li class="date"><em>2022.11.01</em></li>
+						<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../member/suspend_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<div class="vbox_ck checks">
+							<span>
+							<input type="checkbox" id="chk_02" name="chk">
+							<label for="chk_02"><i>checkbox</i></label>
+							</span>
+							</div>
+						</li>
+						<li class="no"><em>99</em></li>
+						<li class="id"><em>help@sigmachain.net (길어질 경우 말줄임표로 나타냄)</em></li>
+						<li class="nickname"><em>닉네임 (길어질 경우 말줄임표로 나타냄)</em></li>
+						<li class="state"><em>정지</em></li>
+						<li class="date"><em>2022.11.01</em></li>
+						<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../member/suspend_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<div class="vbox_ck checks">
+							<span>
+							<input type="checkbox" id="chk_03" name="chk">
+							<label for="chk_03"><i>checkbox</i></label>
+							</span>
+							</div>
+						</li>
+						<li class="no"><em>98</em></li>
+						<li class="id"><em>help@sigmachain.net</em></li>
+						<li class="nickname"><em>핫플레이스시스템</em></li>
+						<li class="state"><em>정지</em></li>
+						<li class="date"><em>2022.11.01</em></li>
+						<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../member/suspend_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<div class="vbox_ck checks">
+							<span>
+							<input type="checkbox" id="chk_04" name="chk">
+							<label for="chk_04"><i>checkbox</i></label>
+							</span>
+							</div>
+						</li>
+						<li class="no"><em>97</em></li>
+						<li class="id"><em>help@sigmachain.net</em></li>
+						<li class="nickname"><em>놀러갈고양이</em></li>
+						<li class="state"><em>정지</em></li>
+						<li class="date"><em>2022.11.01</em></li>
+						<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../member/suspend_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<div class="vbox_ck checks">
+							<span>
+							<input type="checkbox" id="chk_05" name="chk">
+							<label for="chk_05"><i>checkbox</i></label>
+							</span>
+							</div>
+						</li>
+						<li class="no"><em>96</em></li>
+						<li class="id"><em>help@sigmachain.net</em></li>
+						<li class="nickname"><em>샤랄라로맨스</em></li>
+						<li class="state"><em>정지</em></li>
+						<li class="date"><em>2022.11.01</em></li>
+						<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../member/suspend_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<div class="vbox_ck checks">
+							<span>
+							<input type="checkbox" id="chk_06" name="chk">
+							<label for="chk_06"><i>checkbox</i></label>
+							</span>
+							</div>
+						</li>
+						<li class="no"><em>95</em></li>
+						<li class="id"><em>help@sigmachain.net</em></li>
+						<li class="nickname"><em>핫플레이스시스템</em></li>
+						<li class="state"><em>정지</em></li>
+						<li class="date"><em>2022.11.01</em></li>
+						<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../member/suspend_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<div class="vbox_ck checks">
+							<span>
+							<input type="checkbox" id="chk_07" name="chk">
+							<label for="chk_07"><i>checkbox</i></label>
+							</span>
+							</div>
+						</li>
+						<li class="no"><em>94</em></li>
+						<li class="id"><em>help@sigmachain.net</em></li>
+						<li class="nickname"><em>놀러갈고양이</em></li>
+						<li class="state"><em>정지</em></li>
+						<li class="date"><em>2022.11.01</em></li>
+						<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../member/suspend_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<div class="vbox_ck checks">
+							<span>
+							<input type="checkbox" id="chk_08" name="chk">
+							<label for="chk_08"><i>checkbox</i></label>
+							</span>
+							</div>
+						</li>
+						<li class="no"><em>93</em></li>
+						<li class="id"><em>help@sigmachain.net</em></li>
+						<li class="nickname"><em>샤랄라로맨스</em></li>
+						<li class="state"><em>정지</em></li>
+						<li class="date"><em>2022.11.01</em></li>
+						<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../member/suspend_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<div class="vbox_ck checks">
+							<span>
+							<input type="checkbox" id="chk_09" name="chk">
+							<label for="chk_09"><i>checkbox</i></label>
+							</span>
+							</div>
+						</li>
+						<li class="no"><em>92</em></li>
+						<li class="id"><em>help@sigmachain.net</em></li>
+						<li class="nickname"><em>핫플레이스시스템</em></li>
+						<li class="state"><em>정지</em></li>
+						<li class="date"><em>2022.11.01</em></li>
+						<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../member/suspend_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<div class="vbox_ck checks">
+							<span>
+							<input type="checkbox" id="chk_10" name="chk">
+							<label for="chk_10"><i>checkbox</i></label>
+							</span>
+							</div>
+						</li>
+						<li class="no"><em>91</em></li>
+						<li class="id"><em>help@sigmachain.net</em></li>
+						<li class="nickname"><em>핫플레이스시스템</em></li>
+						<li class="state"><em>정지</em></li>
+						<li class="date"><em>2022.11.01</em></li>
+						<li class="detail"><input type="button" class="bbtn" value="보기" onClick="window.location='../member/suspend_detail.html'"></li>
+					</ul>
+				</div>
+				<!-- // 내역있을 시 -->
+
+			</div>
+
+			<!-- page -->
+			<div class="page">
+				<ul>
+					<li class="start"><a href=""><span>처음</span> </a></li>
+					<li class="pre"><a href=""><span>이전</span> </a></li>
+					<li><a href="">1</a></li>
+					<li class="on"><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li><a href="">5</a></li>
+					<li class="next"><a href=""><span>다음 </span> </a></li>
+					<li class="end"><a href=""><span>마지막 </span> </a></li>
+				</ul>
+			</div>
+			<!-- // page -->
+
+		</section>
+		<!-- boardwrap -->
+
+	</div>
+	<!-- // content -->
+
+</div>
+<!-- // wrap -->
+
+
+</body>
+</html>

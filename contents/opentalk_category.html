@@ -1,0 +1,425 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<title>OWNERWORLD 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+
+<!-- header -->
+<header>
+	<h1><a href="../main/index.html"><img src="../assets/img/com/logo.svg" alt="오너월드 관리자"><span><strong>OWNERWORLD</strong><em>오너월드 관리자</em></span></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../main/index.html"><span>DASHBOARD</span></a></li>
+			<li><a href="../member/person.html"><span>회원관리</span></a></li>
+			<li class="on"><a href="../cs/qna.html"><span>CS관리</span></a></li>
+			<li><a href="../coin/coin.html"><span>코인관리</span></a></li>
+			</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>CS 관리</h2>
+		<ul>
+			<li><a href="../contents/opentalk.html"><span>오픈톡리스트</span></a></li>
+			<li class="on"><a href="../contents/opentalk_category.html"><span>오픈톡 카테고리설정</span></a></li>
+		</ul>
+		<p class="copyright">COPYRIGHT © OWNERWORLD. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+	<!-- content -->
+	<div class="content">
+
+			<h2 class="ctit"><span>CONTENTS</span> 오픈톡 카테고리설정</h2>
+
+		<!-- searchwrap -->
+		<section class="searchwrap">
+
+			<div class="sbox">
+				<span class="stit">검색조건</span>
+
+
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="1" selected>전체</option>
+					<option value="2">제목</option>
+					<option value="3">작성자</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<input type="text" class="stxt" id="searchTxt" name="searchTxt" placeholder="검색어를 입력해보세요">
+			</div>
+
+			<div class="sbtn"><input type="button" id="searchBtn" name="searchBtn" value ="검색"></div>
+
+		</section>
+		<!-- // searchwrap -->
+
+		<!-- boardwrap -->
+		<section class="boardwrap">
+
+			<div class="boardtit">
+				<h3 class="ctit">FAQ <span>20</span></h3>
+				<div class="btbtn">
+					<input type="button" id="" name="" value="FAQ 추가" class="btn_add" onclick="pop_up_layer('pop_faq_create');return false;">
+				</div>
+			</div>
+
+			<div class="boardlist board_faq">
+				<ul class="tit">
+					<li class="no">정렬순서</li>
+					<li class="lang">언어</li>
+					<li class="title">제목</li>
+					<li class="text">본문</li>
+					<li class="state">등록여부</li>
+					<li class="manage">수정/삭제</li>
+				</ul>
+
+				<!-- 내역없을 시
+				<div class="nodata">
+					<span><i>!</i><span>
+					<span>내역이 없습니다</span>
+				</div>
+				<!-- // 내역없을 시 -->
+
+				<!-- 내역있을 시 : 기본 20개씩 노출  -->
+				<div class="listwrap displaywrap">
+					<ul>
+						<li class="no"><input type="text" id="" name="" class="dnum" value="1"></li>
+						<li class="lang">한국어</li>
+						<li class="title">제목입니다 제목입니다 제목입니다 제목입니다 제목입니다</li>
+						<li class="text">내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 </li>
+						<li class="state"><em class="apply">적용</em></li>
+						<li class="manage">
+							<input type="button" class="bbtn" value="수정" onclick="pop_up_layer('pop_faq_modify');return false;">
+							<input type="button" class="bbtn" value="삭제"  onclick="pop_up_layer('pop_delete');return false;">
+						</li>
+					</ul>
+					<ul>
+						<li class="no"><input type="text" id="" name="" class="dnum" value="2"></li>
+						<li class="lang">영어</li>
+						<li class="title">제목입니다 제목입니다 제목입니다 제목입니다 제목입니다</li>
+						<li class="text">내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 </li>
+						<li class="state"><em class="no-apply">미적용</em></li>
+						<li class="manage">
+							<input type="button" class="bbtn" value="수정" onclick="pop_up_layer('pop_faq_modify');return false;">
+							<input type="button" class="bbtn" value="삭제"  onclick="pop_up_layer('pop_delete');return false;">
+						</li>
+					</ul>
+					<ul>
+						<li class="no"><input type="text" id="" name="" class="dnum" value="3"></li>
+						<li class="lang">한국어</li>
+						<li class="title">제목입니다 제목입니다 제목입니다 제목입니다 제목입니다제목입니다 제목입니다 제목입니다 제목입니다 제목입니다제목입니다 제목입니다 제목입니다 제목입니다 제목입니다</li>
+						<li class="text">내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 </li>
+						<li class="state"><em class="apply">적용</em></li>
+						<li class="manage">
+							<input type="button" class="bbtn" value="수정" onclick="pop_up_layer('pop_faq_modify');return false;">
+							<input type="button" class="bbtn" value="삭제"  onclick="pop_up_layer('pop_delete');return false;">
+						</li>
+					</ul>
+					<ul>
+						<li class="no"><input type="text" id="" name="" class="dnum" value="4"></li>
+						<li class="lang">영어</li>
+						<li class="title">제목입니다 제목입니다 제목입니다 제목입니다 제목입니다</li>
+						<li class="text">내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 </li>
+						<li class="state"><em class="apply">적용</em></li>
+						<li class="manage">
+							<input type="button" class="bbtn" value="수정" onclick="pop_up_layer('pop_faq_modify');return false;">
+							<input type="button" class="bbtn" value="삭제"  onclick="pop_up_layer('pop_delete');return false;">
+						</li>
+					</ul>
+					<ul>
+						<li class="no"><input type="text" id="" name="" class="dnum" value="5"></li>
+						<li class="lang">한국어</li>
+						<li class="title">제목입니다 제목입니다   </li>
+						<li class="text">내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 </li>
+						<li class="state"><em class="apply">적용</em></li>
+						<li class="manage">
+							<input type="button" class="bbtn" value="수정" onclick="pop_up_layer('pop_faq_modify');return false;">
+							<input type="button" class="bbtn" value="삭제"  onclick="pop_up_layer('pop_delete');return false;">
+						</li>
+					</ul>
+					<ul>
+						<li class="no"><input type="text" id="" name="" class="dnum" value="6"></li>
+						<li class="lang">영어</li>
+						<li class="title">제목입니다 제목입니다  제목입니다 제목입니다 제목입니다 제목입니다</li>
+						<li class="text">내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 </li>
+						<li class="state"><em class="apply">적용</em></li>
+						<li class="manage">
+							<input type="button" class="bbtn" value="수정" onclick="pop_up_layer('pop_faq_modify');return false;">
+							<input type="button" class="bbtn" value="삭제"  onclick="pop_up_layer('pop_delete');return false;">
+						</li>
+					</ul>
+					<ul>
+						<li class="no"><input type="text" id="" name="" class="dnum" value="7"></li>
+						<li class="lang">한국어</li>
+						<li class="title">제목입니다 제목입니다 제목입니다  </li>
+						<li class="text">내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 </li>
+						<li class="state"><em class="apply">적용</em></li>
+						<li class="manage">
+							<input type="button" class="bbtn" value="수정" onclick="pop_up_layer('pop_faq_modify');return false;">
+							<input type="button" class="bbtn" value="삭제"  onclick="pop_up_layer('pop_delete');return false;">
+						</li>
+					</ul>
+					<ul>
+						<li class="no"><input type="text" id="" name="" class="dnum" value="8"></li>
+						<li class="lang">영어</li>
+						<li class="title">제목입니다 제목입니다 제목입니다 제목입니다 제목입니다</li>
+						<li class="text">내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 </li>
+						<li class="state"><em class="apply">적용</em></li>
+						<li class="manage">
+							<input type="button" class="bbtn" value="수정" onclick="pop_up_layer('pop_faq_modify');return false;">
+							<input type="button" class="bbtn" value="삭제"  onclick="pop_up_layer('pop_delete');return false;">
+						</li>
+					</ul>
+					<ul>
+						<li class="no"><input type="text" id="" name="" class="dnum" value="9"></li>
+						<li class="lang">한국어</li>
+						<li class="title">제목입니다 제목입니다 제목입니다 제목입니다 제목입니다제목입니다 제목입니다 제목입니다 제목입니다 제목입니다제목입니다 제목입니다 제목입니다 제목입니다 제목입니다</li>
+						<li class="text">내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 </li>
+						<li class="state"><em class="apply">적용</em></li>
+						<li class="manage">
+							<input type="button" class="bbtn" value="수정" onclick="pop_up_layer('pop_faq_modify');return false;">
+							<input type="button" class="bbtn" value="삭제"  onclick="pop_up_layer('pop_delete');return false;">
+						</li>
+					</ul>
+					<ul>
+						<li class="no"><input type="text" id="" name="" class="dnum" value="10"></li>
+						<li class="lang">영어</li>
+						<li class="title">제목입니다 제목입니다 제목입니다 제목입니다 제목입니다</li>
+						<li class="text">내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 </li>
+						<li class="state"><em class="apply">적용</em></li>
+						<li class="manage">
+							<input type="button" class="bbtn" value="수정" onclick="pop_up_layer('pop_faq_modify');return false;">
+							<input type="button" class="bbtn" value="삭제"  onclick="pop_up_layer('pop_delete');return false;">
+						</li>
+					</ul>
+				</div>
+				<!-- // 내역있을 시 -->
+
+			</div>
+
+			<!-- page -->
+			<div class="page">
+				<ul>
+					<li class="start"><a href=""><span>처음</span> </a></li>
+					<li class="pre"><a href=""><span>이전</span> </a></li>
+					<li><a href="">1</a></li>
+					<li class="on"><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li><a href="">5</a></li>
+					<li class="next"><a href=""><span>다음 </span> </a></li>
+					<li class="end"><a href=""><span>마지막 </span> </a></li>
+				</ul>
+			</div>
+			<!-- // page -->
+
+
+		</section>
+		<!-- boardwrap -->
+
+	</div>
+	<!-- // content -->
+
+</div>
+<!-- // wrap -->
+
+<div id="toast" class="toast"></div>
+
+<!--  pop_delete -->
+<div class="popwrap pop_delete">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_delete">
+		<div class="pwrap">
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">삭제하시겠습니까?</div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="삭제" class="cbtn bb2" onclick="toast('삭제되었습니다')" >
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_delete -->
+
+<!--  pop_faq_create -->
+<div class="popwrap mw800 pop_faq_create">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_faq_create">
+		<div class="pwrap">
+			<div class="pop_tit">
+				<h3>FAQ 추가</h3>
+			</div>
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="faqform">
+					<dl>
+						<dt>언어</dt>
+						<dd>
+						<!-- selectbox -->
+						<div class="selectbox">
+							<select class="selectpicker">
+							<option value="1" selected>한국어</option>
+							<option value="2">영어</option>
+							</select>
+						</div>
+						<!-- // selectbox -->
+						</dd>
+					</dl>
+					<dl>
+						<dt>제목</dt>
+						<dd><input type="text" id="" name="" placeholder="제목을 입력하세요" value=""></dd>
+					</dl>
+					<dl>
+						<dt>내용 </dt>
+						<dd>
+						<textarea type="text" id="" name="" class="textarea"  placeholder="내용을 입력해 주세요" ></textarea>
+						</dd>
+					</dl>
+					<dl>
+						<dt>순서</dt>
+						<dd><input type="text" id="" name="" placeholder="번호을 입력하세요 (작을수록 위쪽에 노출됩니다)" value=""></dd>
+					</dl>
+					<dl>
+						<dt>적용여부</dt>
+						<dd>
+						<div class="checks">
+								<span>
+								<input type="radio" id="faq_csort1" name="faq_csort" checked="checked">
+								<label for="faq_csort1">적용</label>
+								</span>
+								<span>
+								<input type="radio" id="faq_csort2" name="faq_csort">
+								<label for="faq_csort2">미적용</label>
+								</span>
+						</div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="추가" class="cbtn bb2" >
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_faq_create -->
+
+<!--  pop_faq_modify -->
+<div class="popwrap mw800 pop_faq_modify">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_faq_modify">
+		<div class="pwrap">
+			<div class="pop_tit">
+				<h3>카테고리 수정</h3>
+			</div>
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="faqform">
+					<dl>
+						<dt>언어</dt>
+						<dd>
+						<!-- selectbox -->
+						<div class="selectbox">
+							<select class="selectpicker">
+							<option value="1" selected>한국어</option>
+							<option value="2">영어</option>
+							</select>
+						</div>
+						<!-- // selectbox -->
+						</dd>
+					</dl>
+					<dl>
+						<dt>제목</dt>
+						<dd><input type="text" id="" name="" placeholder="제목을 입력하세요" value="한식"></dd>
+					</dl>
+					<dl>
+						<dt>내용 </dt>
+						<dd><textarea type="text" id="" name="" class="textarea"  placeholder="내용을 입력해 주세요" >내용입니다 내용입니다 내용입니다 내용입니다 </textarea></dd>
+					</dl>
+					<dl>
+						<dt>순서</dt>
+						<dd><input type="text" id="" name=""  value="1"></dd>
+					</dl>
+					<dl>
+						<dt>적용여부</dt>
+						<dd>
+						<div class="checks">
+								<span>
+								<input type="radio" id="faq_msort1" name="faq_msort" checked="checked">
+								<label for="faq_msort1">적용</label>
+								</span>
+								<span>
+								<input type="radio" id="faq_msort2" name="faq_msort">
+								<label for="faq_msort2">미적용</label>
+								</span>
+						</div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="수정" class="cbtn bb2" onclick="toast('수정되었습니다')" >
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_faq_modify -->
+
+
+</body>
+</html>

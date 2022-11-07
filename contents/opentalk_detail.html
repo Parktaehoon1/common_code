@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<title>OWNERWORLD 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+
+<!-- header -->
+<header>
+	<h1><a href="../main/index.html"><img src="../assets/img/com/logo.svg" alt="오너월드 관리자"><span><strong>OWNERWORLD</strong><em>오너월드 관리자</em></span></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../main/index.html"><span>DASHBOARD</span></a></li>
+			<li><a href="../member/person.html"><span>회원관리</span></a></li>
+			<li class="on"><a href="../contents/opentalk.html"><span>콘텐츠관리</span></a></li>
+			<li><a href="../cs/qna.html"><span>CS관리</span></a></li>
+			<li><a href="../coin/coin.html"><span>코인관리</span></a></li>
+			</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>CS 관리</h2>
+		<ul>
+			<li class="on"><a href="../contents/opentalk.html"><span>오픈톡리스트</span></a></li>
+			<li><a href="../contents/opentalk_category.html"><span>오픈톡카테고리설정</span></a></li>
+		</ul>
+		<p class="copyright">COPYRIGHT © OWNERWORLD. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+	<!-- content -->
+	<div class="content">
+
+		<h2 class="ctit"><span>CUSTOMER</span> 오픈톡 상세정보</h2>
+
+		<section class="boardview bv_opentalk">
+			<h3 class="ctit">상세정보</h3>
+			<div>
+			    <dl>
+					<dt>이미지 </dt>
+					<dd class="img"><span><img src="../assets/img/event/event_01.jpg"></span></dd>
+				</dl>
+				<dl>
+					<dt>오픈톡 이름</dt>
+					<dd>블록체인 코인투자 모임</dd>
+				</dl>
+				<dl>
+					<dt>생성일</dt>
+					<dd>2022.10.21 </dd>
+				</dl> 
+				<dl>
+					<dt>회원수 </dt>
+					<dd>554</dd>
+				</dl>	 				
+				<dl>
+					<dt>카테고리</dt>
+					<dd>주식 / 투자 </dd>
+				</dl>
+				<dl>
+					<dt>해시태그</dt>
+					<dd>#주식 #투자 #블록체인 #코인투자 #코인 #코린이 #코인공부 #코인박사 #주식공부 
+					</dd>
+				</dl>
+				
+			</div>
+		</section>
+
+			<section class="boardview">
+			<h3 class="ctit">오너회원 정보</h3>
+			<div>
+				<dl>
+					<dt>ID (이메일)</dt>
+					<dd>help@sigmachain.net</dd>
+				</dl>
+				<dl>
+					<dt>닉네임</dt>
+					<dd>블록체인마스터</dd>
+				</dl>
+
+				<dl>
+					<dt>회원가입일</dt>
+					<dd>2022.11.01</dd>
+				</dl>
+				<dl>
+					<dt>최근접속일</dt>
+					<dd>2022.12.31</dd>
+				</dl>
+				<dl>
+					<dt>회원상태</dt>
+					<dd class="bvwrap">
+					<span>일반</span>
+						<span class="bvbtn">
+							<input type="button" id="" value="회원관리"  onClick="window.location='../member/person_detail.html'">
+						</span>
+					</dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- btnwrap -->
+		<div class="btnwrap">
+			<input type="button" value="정지" onclick="pop_up_layer('pop_suspension_opentalk ');return false;">
+			<input type="button" value="목록" onClick="window.location='../cs/event.html'">
+			<input type="button" value="경고" class="btn_ok" onclick="pop_up_layer('pop_warning_opentalk ');return false;">
+		</div>
+		<!-- // btnwrap -->
+
+	</div>
+	<!-- // content -->
+
+</div>
+<!-- // wrap -->
+
+
+<div id="toast" class="toast"></div>
+
+<!--  pop_suspension_opentalk  -->
+<div class="popwrap mw500 pop_suspension_opentalk">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_suspension_opentalk">
+		<div class="pwrap">
+
+			<div class="pop_tit">
+				<h3>정지처리</h3>
+			</div>
+
+			<!-- pbox  -->
+			<div class="pbox">
+				<h4 class="pstit"><em>help@sigmachain.net</em> 님의 <br>[블록체인 코인투자 모임] 그룹채팅방의<br> <span><i>정지처리사유</i>를 정확히 입력해주세요</span></h4>
+				<div class="psbox">
+					<textarea id="suspension" name="suspension"> </textarea>
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="채팅방정지" class="cbtn  bb2" onclick="toast('정지처리가 완료되었습니다')" >
+			</div>
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_suspension_opentalk  -->
+
+<!--  pop_warning_opentalk  -->
+<div class="popwrap mw500 pop_warning_opentalk">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_warning_opentalk">
+		<div class="pwrap">
+
+			<div class="pop_tit">
+				<h3>경고처리</h3>
+			</div>
+
+			<!-- pbox  -->
+			<div class="pbox">
+				<h4 class="pstit"><em>help@sigmachain.net</em> 님의 <br>[블록체인 코인투자 모임] 그룹채팅방의<br> <span><i>경고사유</i>를 정확히 입력해주세요</span></h4>
+				<div class="psbox">
+					<textarea id="suspension" name="suspension"> </textarea>
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="보내기" class="cbtn  bb2" onclick="toast('경고메시지를 전송하였습니다')" >
+			</div>
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_warning_opentalk  -->
+
+
+</body>
+</html>

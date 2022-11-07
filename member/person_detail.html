@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<title>OWNERWORLD 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+
+
+<!-- header -->
+<header>
+	<h1><a href="../main/index.html"><img src="../assets/img/com/logo.svg" alt="오너월드 관리자"><span><strong>OWNERWORLD</strong><em>오너월드 관리자</em></span></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../main/index.html"><span>DASHBOARD</span></a></li>
+			<li class="on"><a href="../member/person.html"><span>회원관리</span></a></li>
+			<li><a href="../contents/opentalk.html"><span>콘텐츠관리</span></a></li>
+			<li><a href="../cs/notice.html"><span>CS관리</span></a></li>
+			<li><a href="../coin/coin.html"><span>코인관리</span></a></li>
+			</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>회원관리</h2>
+		<ul>
+			<li class="on"><a href="../member/person.html"><span>일반회원</span></a></li>
+			<li><a href="../member/suspend.html"><span>정지된 회원</span></a></li>
+		</ul>
+		<p class="copyright">COPYRIGHT © OWNERWORLD. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+
+	<!-- content -->
+	<div class="content">
+
+		<h2 class="ctit"><span>MEMBER</span> 일반회원 상세정보</h2>
+
+		<section class="boardview">
+			<h3 class="ctit">회원정보</h3>
+			<div>
+				<dl>
+					<dt>ID (이메일)</dt>
+					<dd>help@sigmachain.net</dd>
+				</dl>
+				<dl>
+					<dt>닉네임</dt>
+					<dd>여행가고파</dd>
+				</dl>
+
+				<dl>
+					<dt>회원가입일</dt>
+					<dd>2022.11.01</dd>
+				</dl>
+				<dl>
+					<dt>최근접속일</dt>
+					<dd>2022.12.31</dd>
+				</dl>
+				<dl>
+					<dt>회원상태</dt>
+					<dd class="bvwrap">
+					<span>일반</span>
+						<span class="bvbtn">
+							<input type="button" id="" value="정지" onclick="pop_up_layer('pop_suspension_member');return false;">
+							<!--<input type="button" id="" value="정지취소" onclick="pop_up_layer('pop_suspension_cancel');return false;">-->
+							<input type="button" id="" value="탈퇴" onclick="pop_up_layer('pop_withdraw_member');return false;">
+						</span>
+					</dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- btnwrap -->
+		<div class="btnwrap">
+			<input type="button" value="목록" onClick="window.location='../member/person.html'">
+		</div>
+		<!-- // btnwrap -->
+
+	</div>
+	<!-- // content -->
+
+</div>
+<!-- // wrap -->
+
+
+<div id="toast" class="toast"></div>
+
+
+<!--  pop_suspension_member  -->
+<div class="popwrap mw500 pop_suspension_member">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_suspension_member">
+		<div class="pwrap">
+
+			<div class="pop_tit">
+				<h3>정지처리</h3>
+			</div>
+
+			<!-- pbox  -->
+			<div class="pbox">
+				<h4 class="pstit"><em>help@sigmachain.net</em> 님의 <br><span><i>정지처리사유</i>를 정확히 입력해주세요</span></h4>
+				<div class="psbox">
+					<textarea id="suspension" name="suspension"> </textarea>
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="회원정지" class="cbtn  bb2" onclick="toast('정지처리가 완료되었습니다')" >
+			</div>
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_suspension_member -->
+
+
+<!--  pop_withdraw_member  -->
+<div class="popwrap mw500 pop_withdraw_member">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_withdraw_member">
+		<div class="pwrap">
+
+			<div class="pop_tit">
+				<h3>탈퇴처리</h3>
+			</div>
+
+			<!-- pbox  -->
+			<div class="pbox">
+				<h4 class="pstit"><em>help@sigmachain.net</em> 님의<span><i>탈퇴처리사유</i>를 정확히 입력해주세요</span></h4>
+				<div class="psbox">
+					<textarea id="withdraw" name="withdraw"> </textarea>
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="회원탈퇴" class="cbtn bb2" onclick="toast('탈퇴처리가 완료되었습니다')" >
+			</div>
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_withdraw_member -->
+
+
+<!--  pop_suspension_cancel  -->
+<div class="popwrap pop_suspension_cancel">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_suspension_cancel">
+		<div class="pwrap">
+
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">
+					회원정지 상태입니다. <br>회원상태를 일반으로 변경하시겠습니까?
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="확인" class="cbtn bb2" onclick="toast('상태가 일반으로 변경되었습니다')" >
+			</div>
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_suspension_cancel -->
+
+</body>
+</html>
